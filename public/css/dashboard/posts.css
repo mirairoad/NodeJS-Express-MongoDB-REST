@@ -1,0 +1,74 @@
+/* post-views */
+.post__menu {
+  height: 100%;
+}
+.post__content {
+  padding: 10px;
+}
+.post__output-single {
+  padding: 10px;
+}
+.post__title {
+  color: var(--color-light-black);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  margin-bottom: 7px;
+  text-transform: capitalize;
+}
+.post__paragraph {
+  padding-top: 3px;
+  padding-left: 3px;
+}
+.post__menu {
+  padding-top: 3px;
+  padding-left: 3px;
+}
+.delete__link {
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+/* post-form */
+.post__label {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.post__info-child,
+.post__info-child > a {
+  color: var(--color-light-black);
+  font-size: 18px;
+}
+.post__info-child > a:hover {
+  color: var(--color-primary-alternative);
+  font-size: 18px;
+}
+.title-post {
+  color: var(--color-light-black);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+.title-post:not(:last-child) {
+  margin-bottom: 0px;
+}
+.tile.is-parent {
+  transition: var(--transition);
+}
+.post__info-parent {
+  padding-left: 3px;
+  padding-top: 3px;
+}
+
+.form-input-post {
+  width: 100%;
+}
+.post-mb-15.tile.is-child {
+    margin-bottom: 25px!important;
+}
+.form-textarea-modal{
+    height: 450px;
+}
