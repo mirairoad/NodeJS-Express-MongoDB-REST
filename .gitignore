@@ -1,0 +1,8 @@
+node_modules
+DS_Store
+.DS_Store
+.env
+logs/errLog.txt
+logs/reqLog.txt
+rest.http
+yarn-error.log
