@@ -1,1 +1,40 @@
-<h1>Page not found</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>REST API - HEADLESS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style rel="stylesheet">
+            .body-props{
+                background-color: rgb(236, 236, 236);
+
+            }
+            .container{
+                width: 76%;
+                margin: auto;
+            }
+            .container-title{
+                text-align: center;
+                padding: 25%;
+            }
+        </style>
+    </head>
+    <body class="body-props">
+        <main class="container">
+            <div class="container-title">
+                <h1>RESTAPI - ADVANCED</h1>
+                <h2>404 - PAGE NOT FOUND</h2>
+                <h3>You will be redirect in 8 secs.</h3>
+            </div>
+        </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(()=>{
+                    location.assign('/');
+                }, 8000)
+            })
+        </script>
+    </body>
+</html>
