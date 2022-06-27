@@ -1,5 +1,15 @@
-# RESTAPI-ADVANCED
-this is my RESTfulAPi v0.01
+# RESTAPI-CRUD-ADVANCED
+REST API v0.01
+
+# CORE
+MongoDB,
+Express,
+NodeJS,
+
+# POLICY
+isOwner : TRUE : UUID -> USER,
+isAuthor : TRUE : STRING -> PROFILE,
+LOGS : Active,
 
 # Libraries
 sendgrid/mail,
@@ -24,13 +34,12 @@ validator.
 
 # Installation
 1) npm install to download the packages
-2) set up the enviroment variables on your server or through the file.env
-3) install mongoDB or create an account on Atlas
-4) create an account sendgrid and request the APIs
+2) set up the environment variables on your server or through the file.env
+3) install MongoDB or create an account on Atlas
+4) create an account SendGrid and request the APIs
 
-REST API
-For fetching the data from the RESTAPI it may be a good Idea to use POSTMAN. You will find below a PDF with the REST API Routes available so far.
-REST_API_ROUTES
+# REST API Routes
+For fetching the data from the RESTAPI it may be a good idea to use Postman. 
 
 # Users
 POST http://localhost:1338/api/signup
@@ -141,9 +150,6 @@ This will delete the post.
 
 # Next Features
 - Frontend dashboard based on VUE.js.
-- Ability to create your own REST APIs without coding, pass the model name, hit the route, boom… Done.
-- Admin can control and delete any collection from the dashboard.
-- API routes have the choice to be protected.
+- Ability to create your REST APIs without coding, pass the model name, hit the route, boom… Done.
+- Auth for API Routes.
 - CORS can be controlled by the dashboard and allows only the genuine clients.
-- We are on GitHub
-- Create a community
