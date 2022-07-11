@@ -60,7 +60,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Serve static page
-app.get("*");
 
 app.get("/", function(req,res){
   res.sendFile(path.join(`${__dirname}/views/index.html`));
