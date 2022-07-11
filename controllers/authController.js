@@ -29,11 +29,11 @@ const registerController = async function (req, res, next) {
         function (err, user) {
           if (err) {
             console.log(err);
-            res.status(403).json({ message_error:err.message, message:"failed"});
+            res.status(403).json({ message_error:err.message, message:"email already registered"});
           } else {
             passport.authenticate("local")(req, res, function () {
               sendWelcomeEmail(req.user.username, req.user._id);
-              res.json({ message: "success", user:req.user });
+              res.status(200).json({ message: "success", user:req.user });
             });
           }
         }
@@ -42,21 +42,21 @@ const registerController = async function (req, res, next) {
 
 // login controller
 const loginController = async function (req, res, next) {
-    const user = new User({
-        username: req.body.username,
-        password: req.body.password,
-      });
-      req.login(user, function (err) {
-        if (err) {
-          console.log(err);
-          next(err);
-        } else {
-          // use as API failureRedirect: '/login',
-          passport.authenticate("local")(req, res, function () {
-            res.status(201).json({ message: "success", user:req.user });
-          });
-        }
-      });
+  const user = new User({
+      username: req.body.username,
+      password: req.body.password,
+    });
+    req.login(user, function (err) {
+      if (err) {
+        console.log(err);
+        next(err);
+      } else {
+        // use as API failureRedirect: '/login',
+        passport.authenticate("local")(req, res, function () {
+          res.json({ message: "Authenticated successfully", user:req.user });
+        });
+      }
+    });
 };
 
 // logout controller

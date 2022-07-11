@@ -112,12 +112,12 @@ passport.use(
       {
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
-        callbackURL: process.env.SITE_URL + "/auth/google/secrets",
+        callbackURL: process.env.SITE_URL + "/auth/google/",
         userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
       },
-      function (accessToken, refreshToken, profile, cb) {
+      function (profile, cb) {
         console.log(profile);
-        User.findOrCreate({ googleId: profile.id }, function (err, user) {
+        User.findOrCreate({ googleId: profile.id, username:profile.email  }, function (err, user) {
           return cb(err, user);
         });
       }
