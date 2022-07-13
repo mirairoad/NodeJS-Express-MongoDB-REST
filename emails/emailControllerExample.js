@@ -5,7 +5,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 const sendWelcomeEmail = (email, _id) => {
     sgMail.send({
         to: email,
-        from:'termine92@gmail.com',
+        from:'mail@gmail.com',
         subject:'Thanks for joining in!',
         html:`<h1>Welcome to the app,</h1>
         </br>
@@ -19,7 +19,7 @@ const sendWelcomeEmail = (email, _id) => {
 const sendCancelationEmail = (email) => {
     sgMail.send({
         to: email,
-        from:'termine92@gmail.com',
+        from:'mail@gmail.com',
         subject:'Delete Confimed',
         html:`<p>Hi there,</p> <br> <p>Your account has been removed from our database along with your data.</p> `
 
@@ -29,7 +29,7 @@ const sendCancelationEmail = (email) => {
 const sendForgottenEmail = (email, _id, reset_link) => {
     sgMail.send({
         to: email,
-        from:'termine92@gmail.com',
+        from:'mail@gmail.com',
         subject:'Forgotten Password',
         html:`<h1>Forgotten Password,</h1>
         </br>

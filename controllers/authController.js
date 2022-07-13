@@ -4,7 +4,7 @@ const {
     sendWelcomeEmail,
     sendCancelationEmail,
     sendForgottenEmail,
-  } = require("../emails/account");
+  } = require("../emails/emailController");
 
 
 // google oAuth

@@ -1,5 +1,5 @@
 {
-  "name": "ssr_template",
+  "name": "rest-api",
   "version": "1.0.0",
   "description": "REST API (express jwt MongoDB)",
   "main": "app.js",

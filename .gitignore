@@ -1,8 +1,16 @@
+# folders
+[e]mails/emailController.js
+
 node_modules
 DS_Store
+logs
+
+# files
 .DS_Store
 .env
-logs/errLog.txt
-logs/reqLog.txt
 rest.http
 yarn-error.log
+
+# git
+.git
+.gitignore

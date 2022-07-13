@@ -1,5 +1,5 @@
 # RESTAPI-CRUD-ADVANCED
-REST API v0.01
+REST API v0.05
 
 # CORE
 MongoDB,
@@ -7,8 +7,8 @@ Express,
 NodeJS,
 
 # POLICY
-isOwner : TRUE : UUID -> USER,
-isAuthor : TRUE : STRING -> PROFILE,
+isOwner : TRUE
+isAuthor : TRUE
 LOGS : Active,
 
 # Libraries
@@ -34,9 +34,17 @@ validator.
 
 # Installation
 1) npm install to download the packages
-2) set up the environment variables on your server or through the file.env
-3) install MongoDB or create an account on Atlas
-4) create an account SendGrid and request the APIs
+2) Rename .env.example to .env
+3) Set up the environment variables on your server or through the file .env
+4) Install MongoDB on your local machine or create an account on Atlas
+5) Add MongoDB IP into the .env file
+6) Create a SendGrid Account and an API secret key
+7) Rename ./emails/emailControllerExample.js to emailController.js
+8) npm run dev to start the development
+
+# Please Pay Attention
+You may incur into a problem with npm i sharp, 
+make sure to download the right version that will be exposed to the console.
 
 # REST API Routes
 For fetching the data from the RESTAPI it may be a good idea to use Postman. 
